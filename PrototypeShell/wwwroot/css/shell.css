@@ -1,0 +1,70 @@
+﻿body {
+    background-color: #fbf1c7;
+}
+
+strong {
+    color: #9d0006;
+}
+
+#container {
+    position: relative;
+    /*border: 3px solid green;*/
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    /*color: #3c3836;*/
+    color: #504945;
+}
+
+#shellbox, #inputField {
+    /*border: 3px solid black;*/
+    width: 90vw;
+    height: 90vh;
+    margin: auto auto 0px auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#inputField {
+    margin: 0 auto 0 auto;
+    width: 90vw;
+    height: 3vh;
+    display: flex;
+}
+
+#inputBar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border-style: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+#inputBar:focus {
+    outline: none;
+}
+
+form {
+    flex: 1;
+}
+
+#statusBar {
+    height: 100%;
+}
+
+#textArea {
+    /*background-color: grey;*/
+    margin: auto auto 0px auto;
+    /*display: inline-block;*/
+    overflow: auto;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

@@ -1,0 +1,47 @@
+﻿@model PrototypeShell.Models.Command
+
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Shell</title>
+    <link rel="icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/css/shell.css" />
+    <link rel="stylesheet" href="~/lib/line-awesome-1.3.0/css/line-awesome.min.css" />
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="shellbox"><pre id="textArea"></pre></div>
+        <div id="inputField">
+            <div id="statusBar"></div>
+            <form spellcheck="false"
+                  data-ajax-mode="after"
+                  method="post"
+                  data-ajax="true"
+                  data-ajax-method="post"
+                  data-ajax-url="Home/ProcessComm"
+                  data-ajax-update="#textArea"
+                  data-ajax-loading="#spinner"
+                  data-ajax-begin="clearInput"
+                  data-ajax-complete="onComplete">
+                <input id="inputBar" autofocus autocomplete="off" type="text" name="command" />
+            </form>
+            <div id="spinner" style="display: none;">
+                <i class="las la-slash la-pulse la-lg"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script src="~/lib/jquery/jquery-3.5.1.min.js"></script>
+    <script src="~/lib/jquery/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>
